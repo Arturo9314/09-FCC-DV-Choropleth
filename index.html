@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualize Data with a Choropleth Map</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.js" integrity="sha512-TRzTPm8e1jUdGz4mhoZstgVz6TIwSYubMI+MKF18uf6zBX8gwrcO0tlH+U/YgbVUVVh15RbNSAgKlab37WFPSQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div id='tooltip'>
+        </div>
+        <h1 id="title">United States Educational Attainment</h1>
+        <p id="description">Percentage of adults age 25 and older with a bachelor's degree or higher (2010-2014)</p>
+        <svg id="canvas">
+            <g class="key" id="legend" transform="translate(0,40)" fill="none" font-size="10" font-family="sans-serif" text-anchor="middle">
+                <rect height="8"></rect><rect height="8" x="600" width="33" fill="#480355"></rect><rect height="8" x="633" width="32" fill="#9448BC"></rect><rect height="8" x="665" width="33" fill="#90FCF9"></rect><rect height="8" x="698" width="32" fill="#78D5D7"></rect><rect height="8" x="730" width="33" fill="#7699D4"></rect><rect height="8" x="763" width="32" fill="#2081C3"></rect><rect height="8" x="795" width="33" fill="#0D4B75"></rect><rect height="8" x="828" fill="#2081C3"></rect><text class="caption" x="600" y="-6" fill="#000" text-anchor="start" font-weight="bold"></text><g class="tick" opacity="1" transform="translate(600.5,0)"><line stroke="currentColor" y2="13"></line><text fill="currentColor" y="16" dy="0.71em">3%</text></g><g class="tick" opacity="1" transform="translate(633.5,0)"><line stroke="currentColor" y2="13"></line><text fill="currentColor" y="16" dy="0.71em">12%</text></g><g class="tick" opacity="1" transform="translate(665.5,0)"><line stroke="currentColor" y2="13"></line><text fill="currentColor" y="16" dy="0.71em">21%</text></g><g class="tick" opacity="1" transform="translate(698.5,0)"><line stroke="currentColor" y2="13"></line><text fill="currentColor" y="16" dy="0.71em">30%</text></g><g class="tick" opacity="1" transform="translate(730.5,0)"><line stroke="currentColor" y2="13"></line><text fill="currentColor" y="16" dy="0.71em">39%</text></g><g class="tick" opacity="1" transform="translate(763.5,0)"><line stroke="currentColor" y2="13"></line><text fill="currentColor" y="16" dy="0.71em">48%</text></g><g class="tick" opacity="1" transform="translate(795.5,0)"><line stroke="currentColor" y2="13"></line><text fill="currentColor" y="16" dy="0.71em">57%</text></g><g class="tick" opacity="1" transform="translate(828.5,0)"><line stroke="currentColor" y2="13"></line><text fill="currentColor" y="16" dy="0.71em">66%</text></g>
+            </g>
+        </svg>
+        <footer id="source">
+            Source:
+            <a href="https://www.ers.usda.gov/data-products/county-level-data-sets/download-data.aspx">USDA Economic Research Service</a>
+          </footer>
+    </main>
+</body>
+<script src="./script.js"></script>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
